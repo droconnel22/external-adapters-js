@@ -1,6 +1,6 @@
 {
   "name": "@chainlink/token-allocation-adapter",
-  "version": "1.11.30",
+  "version": "1.13.1",
   "description": "Chainlink token allocation adapter",
   "keywords": [
     "Chainlink",
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@chainlink/amberdata-adapter": "workspace:*",
+    "@chainlink/blocksize-capital-adapter": "workspace:*",
     "@chainlink/cfbenchmarks-adapter": "workspace:*",
     "@chainlink/coinapi-adapter": "workspace:*",
     "@chainlink/coingecko-adapter": "workspace:*",
@@ -47,10 +48,10 @@
     "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@chainlink/external-adapter-framework": "0.33.8",
+    "@chainlink/external-adapter-framework": "1.7.1",
     "@types/jest": "27.5.2",
-    "@types/node": "16.18.96",
-    "nock": "13.5.4",
-    "typescript": "5.0.4"
+    "@types/node": "16.18.119",
+    "nock": "13.5.5",
+    "typescript": "5.6.3"
   }
 }

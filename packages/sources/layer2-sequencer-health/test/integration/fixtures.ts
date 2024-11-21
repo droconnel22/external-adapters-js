@@ -15,6 +15,20 @@ export const mockResponseSuccessHealth = (): void => {
       'Vary',
       'Origin',
     ])
+
+  nock('https://venus.scroll.io/v1/sequencer/status')
+    .get('')
+    .query(() => true)
+    .reply(200, () => ({ errcode: 0, errmsg: '', data: { health: 1 } }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
 }
 
 export const mockResponseSuccessBlock = (): void => {
@@ -58,6 +72,19 @@ export const mockResponseSuccessBlock = (): void => {
       'Origin',
     ])
 
+  nock('https://rpc.linea.build')
+    .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
+    .reply(200, () => ({ jsonrpc: '2.0', id: 1, result: '0x42d293' }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
+
   nock('https://andromeda.metis.io/')
     .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
     .query({ owner: 1088 })
@@ -84,6 +111,19 @@ export const mockResponseSuccessBlock = (): void => {
       'Vary',
       'Origin',
     ])
+
+  nock('https://mainnet.era.zksync.io')
+    .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
+    .reply(200, () => ({ jsonrpc: '2.0', id: 1, result: '0x42d293' }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
 }
 
 export const mockResponseSuccessRollup = (): void => {
@@ -97,6 +137,20 @@ export const mockResponseFailureHealth = (): void => {
     .get('')
     .query(() => true)
     .reply(200, (_) => ({ healthy: 'false' }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
+
+  nock('https://venus.scroll.io/v1/sequencer/status')
+    .get('')
+    .query(() => true)
+    .reply(200, () => ({ errcode: 1, errmsg: 'Mock Error Message', data: { health: 2 } }), [
       'Content-Type',
       'application/json',
       'Connection',
@@ -149,6 +203,19 @@ export const mockResponseFailureBlock = (): void => {
       'Origin',
     ])
 
+  nock('https://rpc.linea.build')
+    .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
+    .reply(200, () => ({ jsonrpc: '2.0', id: 1, result: '0x00' }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
+
   nock('https://andromeda.metis.io')
     .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
     .query({ owner: 1088 })
@@ -164,6 +231,19 @@ export const mockResponseFailureBlock = (): void => {
     ])
 
   nock('https://rpc.scroll.io')
+    .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
+    .reply(200, () => ({ jsonrpc: '2.0', id: 1, result: '0x00' }), [
+      'Content-Type',
+      'application/json',
+      'Connection',
+      'close',
+      'Vary',
+      'Accept-Encoding',
+      'Vary',
+      'Origin',
+    ])
+
+  nock('https://mainnet.era.zksync.io')
     .post('/', { jsonrpc: '2.0', method: 'eth_blockNumber', params: [], id: /^\d+$/ })
     .reply(200, () => ({ jsonrpc: '2.0', id: 1, result: '0x00' }), [
       'Content-Type',

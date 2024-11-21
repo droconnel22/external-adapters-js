@@ -1,5 +1,108 @@
 # @chainlink/market-closure-adapter
 
+## 1.3.34
+
+### Patch Changes
+
+- Updated dependencies [[`62f0f3b`](https://github.com/smartcontractkit/external-adapters-js/commit/62f0f3b031052e808224b80f7cfce4073c967664), [`8cc19c5`](https://github.com/smartcontractkit/external-adapters-js/commit/8cc19c591a7db6764d49290c14aa8bbdb8eef54d)]:
+  - @chainlink/finnhub-adapter@2.7.18
+
+## 1.3.33
+
+### Patch Changes
+
+- [#3533](https://github.com/smartcontractkit/external-adapters-js/pull/3533) [`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5) Thanks [@renovate](https://github.com/apps/renovate)! - Bump @types/node version
+
+- Updated dependencies [[`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5), [`d8023b9`](https://github.com/smartcontractkit/external-adapters-js/commit/d8023b911fd37ccdc2b41788b072fb9c875fff31), [`876b8ba`](https://github.com/smartcontractkit/external-adapters-js/commit/876b8ba9472009f843076d3d25588b6c89bd489c)]:
+  - @chainlink/ea-reference-data-reader@1.3.36
+  - @chainlink/ea-test-helpers@1.4.5
+  - @chainlink/finnhub-adapter@2.7.17
+  - @chainlink/ea-bootstrap@2.29.2
+  - @chainlink/fcsapi-adapter@1.2.37
+
+## 1.3.32
+
+### Patch Changes
+
+- [#3260](https://github.com/smartcontractkit/external-adapters-js/pull/3260) [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627) Thanks [@renovate](https://github.com/apps/renovate)! - Bump TS version
+
+- Updated dependencies [[`690c025`](https://github.com/smartcontractkit/external-adapters-js/commit/690c025c0a3e0863679418d26dc41c8b662978d8), [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627), [`056ca36`](https://github.com/smartcontractkit/external-adapters-js/commit/056ca36cc51772f3e0cda1db8d6edd7e4a333db6)]:
+  - @chainlink/finnhub-adapter@2.7.16
+  - @chainlink/ea-reference-data-reader@1.3.35
+  - @chainlink/ea-test-helpers@1.4.4
+  - @chainlink/ea-bootstrap@2.29.1
+  - @chainlink/fcsapi-adapter@1.2.36
+
+## 1.3.31
+
+### Patch Changes
+
+- Updated dependencies [[`9cb8367`](https://github.com/smartcontractkit/external-adapters-js/commit/9cb8367d566a7540c36e4a2133dea5aad27bf212)]:
+  - @chainlink/ea-bootstrap@2.29.0
+  - @chainlink/ea-reference-data-reader@1.3.34
+  - @chainlink/ea-test-helpers@1.4.3
+  - @chainlink/fcsapi-adapter@1.2.35
+
+## 1.3.30
+
+### Patch Changes
+
+- Updated dependencies [[`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c), [`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c), [`78f9b06`](https://github.com/smartcontractkit/external-adapters-js/commit/78f9b0664d96551f6a239951c60d4a907ddfe0d9), [`2c75000`](https://github.com/smartcontractkit/external-adapters-js/commit/2c7500055fa2e736fee811896723f297f8faf60e)]:
+  - @chainlink/finnhub-adapter@2.7.15
+  - @chainlink/ea-bootstrap@2.28.0
+  - @chainlink/ea-reference-data-reader@1.3.33
+  - @chainlink/ea-test-helpers@1.4.3
+  - @chainlink/fcsapi-adapter@1.2.34
+
+## 1.3.29
+
+### Patch Changes
+
+- Updated dependencies [[`2fd3620`](https://github.com/smartcontractkit/external-adapters-js/commit/2fd362051a0b8f9b1c0c564ade41780fcf9f379b)]:
+  - @chainlink/finnhub-adapter@2.7.14
+
+## 1.3.28
+
+### Patch Changes
+
+- Updated dependencies [[`9a4d510`](https://github.com/smartcontractkit/external-adapters-js/commit/9a4d510dff13669760a91738dbe7df524f077483)]:
+  - @chainlink/finnhub-adapter@2.7.13
+
+## 1.3.27
+
+### Patch Changes
+
+- Updated dependencies [[`8d83d60`](https://github.com/smartcontractkit/external-adapters-js/commit/8d83d60953e04b1f797f21f1504a3976ea0a4f36)]:
+  - @chainlink/finnhub-adapter@2.7.12
+
+## 1.3.26
+
+### Patch Changes
+
+- Updated dependencies [[`d08f378`](https://github.com/smartcontractkit/external-adapters-js/commit/d08f378e44e3f9587861421066163325c621d150)]:
+  - @chainlink/finnhub-adapter@2.7.11
+
+## 1.3.25
+
+### Patch Changes
+
+- Updated dependencies [[`6518e4d`](https://github.com/smartcontractkit/external-adapters-js/commit/6518e4dc6baca3c6289c595e29d48e149824054d)]:
+  - @chainlink/finnhub-adapter@2.7.10
+
+## 1.3.24
+
+### Patch Changes
+
+- Updated dependencies [[`9f98cbf`](https://github.com/smartcontractkit/external-adapters-js/commit/9f98cbf6f7418d563f7165e97748680ec6b82b58)]:
+  - @chainlink/finnhub-adapter@2.7.9
+
+## 1.3.23
+
+### Patch Changes
+
+- Updated dependencies [[`459c6f2`](https://github.com/smartcontractkit/external-adapters-js/commit/459c6f22acc97fb741d13a342a6aae68d6e63480)]:
+  - @chainlink/finnhub-adapter@2.7.8
+
 ## 1.3.22
 
 ### Patch Changes

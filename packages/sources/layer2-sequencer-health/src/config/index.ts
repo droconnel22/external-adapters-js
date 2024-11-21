@@ -3,7 +3,7 @@ import { AdapterContext, Config } from '@chainlink/ea-bootstrap'
 import { envDefaultOverrides } from './envDefaultOverrides'
 import { RpcProvider } from 'starknet'
 
-export const NAME = 'L2_SEQUENCER_HEALTH'
+export const NAME = 'LAYER2_SEQUENCER_HEALTH'
 export const DEFAULT_PRIVATE_KEY =
   '0x0000000000000000000000000000000000000000000000000000000000000001'
 
@@ -27,28 +27,36 @@ export const DEFAULT_RETRY_INTERVAL = 5 * 100
 export const ENV_ARBITRUM_RPC_ENDPOINT = 'ARBITRUM_RPC_ENDPOINT'
 export const ENV_OPTIMISM_RPC_ENDPOINT = 'OPTIMISM_RPC_ENDPOINT'
 export const ENV_BASE_RPC_ENDPOINT = 'BASE_RPC_ENDPOINT'
+export const ENV_LINEA_RPC_ENDPOINT = 'LINEA_RPC_ENDPOINT'
 export const ENV_METIS_RPC_ENDPOINT = 'METIS_RPC_ENDPOINT'
 export const ENV_SCROLL_RPC_ENDPOINT = 'SCROLL_RPC_ENDPOINT'
+export const ENV_ZKSYNC_RPC_ENDPOINT = 'ZKSYNC_RPC_ENDPOINT'
 
 export const ENV_ARBITRUM_CHAIN_ID = 'ARBITRUM_CHAIN_ID'
 export const ENV_OPTIMISM_CHAIN_ID = 'OPTIMISM_CHAIN_ID'
 export const ENV_BASE_CHAIN_ID = 'BASE_CHAIN_ID'
+export const ENV_LINEA_CHAIN_ID = 'BASE_CHAIN_ID'
 export const ENV_METIS_CHAIN_ID = 'METIS_CHAIN_ID'
 export const ENV_SCROLL_CHAIN_ID = 'SCROLL_CHAIN_ID'
+export const ENV_ZKSYNC_CHAIN_ID = 'ZKSYNC_CHAIN_ID'
 
 export const DEFAULT_ARBITRUM_CHAIN_ID = '42161'
 export const DEFAULT_OPTIMISM_CHAIN_ID = '10'
 export const DEFAULT_BASE_CHAIN_ID = '8453'
+export const DEFAULT_LINEA_CHAIN_ID = '59144'
 export const DEFAULT_METIS_CHAIN_ID = '1088'
 export const DEFAULT_SCROLL_CHAIN_ID = '534352'
+export const DEFAULT_ZKSYNC_CHAIN_ID = '324'
 
 export enum Networks {
   Arbitrum = 'arbitrum',
   Optimism = 'optimism',
   Base = 'base',
+  Linea = 'linea',
   Metis = 'metis',
   Scroll = 'scroll',
   Starkware = 'starkware',
+  zkSync = 'zksync',
 }
 
 export type EVMNetworks = Exclude<Networks, Networks.Starkware>
@@ -56,15 +64,19 @@ export type EVMNetworks = Exclude<Networks, Networks.Starkware>
 const DEFAULT_ARBITRUM_RPC_ENDPOINT = 'https://arb1.arbitrum.io/rpc'
 const DEFAULT_OPTIMISM_RPC_ENDPOINT = 'https://mainnet.optimism.io'
 const DEFAULT_BASE_RPC_ENDPOINT = 'https://mainnet.base.org'
+const DEFAULT_LINEA_RPC_ENDPOINT = 'https://rpc.linea.build'
 const DEFAULT_METIS_RPC_ENDPOINT = 'https://andromeda.metis.io/?owner=1088'
 const DEFAULT_SCROLL_RPC_ENDPOINT = 'https://rpc.scroll.io'
+const DEFAULT_ZKSYNC_RPC_ENDPOINT = 'https://mainnet.era.zksync.io'
 
 export const RPC_ENDPOINTS: Record<EVMNetworks, string | undefined> = {
   [Networks.Arbitrum]: util.getEnv(ENV_ARBITRUM_RPC_ENDPOINT) || DEFAULT_ARBITRUM_RPC_ENDPOINT,
   [Networks.Optimism]: util.getEnv(ENV_OPTIMISM_RPC_ENDPOINT) || DEFAULT_OPTIMISM_RPC_ENDPOINT,
   [Networks.Base]: util.getEnv(ENV_BASE_RPC_ENDPOINT) || DEFAULT_BASE_RPC_ENDPOINT,
+  [Networks.Linea]: util.getEnv(ENV_LINEA_RPC_ENDPOINT) || DEFAULT_LINEA_RPC_ENDPOINT,
   [Networks.Metis]: util.getEnv(ENV_METIS_RPC_ENDPOINT) || DEFAULT_METIS_RPC_ENDPOINT,
   [Networks.Scroll]: util.getEnv(ENV_SCROLL_RPC_ENDPOINT) || DEFAULT_SCROLL_RPC_ENDPOINT,
+  [Networks.zkSync]: util.getEnv(ENV_ZKSYNC_RPC_ENDPOINT) || DEFAULT_ZKSYNC_RPC_ENDPOINT,
 }
 
 export const CHAIN_IDS: Record<EVMNetworks, number | undefined | string> = {
@@ -77,53 +89,88 @@ export const CHAIN_IDS: Record<EVMNetworks, number | undefined | string> = {
   [Networks.Base]:
     parseInt(util.getEnv(ENV_BASE_CHAIN_ID) || DEFAULT_BASE_CHAIN_ID) ||
     util.getEnv(ENV_BASE_CHAIN_ID),
+  [Networks.Linea]:
+    parseInt(util.getEnv(ENV_LINEA_CHAIN_ID) || DEFAULT_LINEA_CHAIN_ID) ||
+    util.getEnv(ENV_LINEA_CHAIN_ID),
   [Networks.Metis]:
     parseInt(util.getEnv(ENV_METIS_CHAIN_ID) || DEFAULT_METIS_CHAIN_ID) ||
     util.getEnv(ENV_METIS_CHAIN_ID),
   [Networks.Scroll]:
     parseInt(util.getEnv(ENV_SCROLL_CHAIN_ID) || DEFAULT_SCROLL_CHAIN_ID) ||
     util.getEnv(ENV_SCROLL_CHAIN_ID),
+  [Networks.zkSync]:
+    parseInt(util.getEnv(ENV_ZKSYNC_CHAIN_ID) || DEFAULT_ZKSYNC_CHAIN_ID) ||
+    util.getEnv(ENV_ZKSYNC_CHAIN_ID),
 }
 
 export const CHAIN_DELTA: Record<Networks, number> = {
   [Networks.Arbitrum]: Number(util.getEnv('ARBITRUM_DELTA')) || DEFAULT_DELTA_TIME,
   [Networks.Optimism]: Number(util.getEnv('OPTIMISM_DELTA')) || DEFAULT_DELTA_TIME,
   [Networks.Base]: Number(util.getEnv('BASE_DELTA')) || DEFAULT_DELTA_TIME,
+  [Networks.Linea]: Number(util.getEnv('LINEA_DELTA')) || DEFAULT_DELTA_TIME,
   [Networks.Metis]: Number(util.getEnv('METIS_DELTA')) || DEFAULT_DELTA_TIME_METIS,
   [Networks.Scroll]: Number(util.getEnv('SCROLL_DELTA')) || DEFAULT_DELTA_TIME,
   [Networks.Starkware]: Number(util.getEnv('STARKWARE_DELTA')) || DEFAULT_DELTA_TIME,
+  [Networks.zkSync]: Number(util.getEnv('ZKSYNC_DELTA')) || DEFAULT_DELTA_TIME,
 }
 
 const DEFAULT_METIS_HEALTH_ENDPOINT = 'https://andromeda-healthy.metisdevops.link/health'
-export const HEALTH_ENDPOINTS: Record<
+const DEFAULT_SCROLL_HEALTH_ENDPOINT = 'https://venus.scroll.io/v1/sequencer/status'
+
+export type HeathEndpoints = Record<
   Networks,
-  { endpoint: string | undefined; responsePath: string[] }
-> = {
+  {
+    endpoint: string | undefined
+    responsePath: string[]
+    processResponse: (data: unknown) => boolean | undefined
+  }
+>
+
+export const HEALTH_ENDPOINTS: HeathEndpoints = {
   [Networks.Arbitrum]: {
     endpoint: util.getEnv('ARBITRUM_HEALTH_ENDPOINT'),
     responsePath: [],
+    processResponse: () => undefined,
   },
   [Networks.Optimism]: {
     endpoint: util.getEnv('OPTIMISM_HEALTH_ENDPOINT'),
     responsePath: ['healthy'],
+    processResponse: () => undefined,
   },
   [Networks.Base]: {
     endpoint: util.getEnv('BASE_HEALTH_ENDPOINT'),
     responsePath: [],
+    processResponse: () => undefined,
+  },
+  [Networks.Linea]: {
+    endpoint: util.getEnv('LINEA_HEALTH_ENDPOINT'),
+    responsePath: [],
+    processResponse: () => undefined,
   },
   [Networks.Metis]: {
     endpoint: util.getEnv('METIS_HEALTH_ENDPOINT') || DEFAULT_METIS_HEALTH_ENDPOINT,
     responsePath: ['healthy'],
+    processResponse: (data: unknown) => defaultProcessResponse(data, Networks.Metis),
   },
   [Networks.Scroll]: {
-    endpoint: util.getEnv('SCROLL_HEALTH_ENDPOINT'),
-    responsePath: [],
+    endpoint: util.getEnv('SCROLL_HEALTH_ENDPOINT') || DEFAULT_SCROLL_HEALTH_ENDPOINT,
+    responsePath: ['data', 'health'],
+    processResponse: (data: unknown) => Requester.getResult(data, ['data', 'health']) == 1,
   },
   [Networks.Starkware]: {
     endpoint: util.getEnv('STARKWARE_HEALTH_ENDPOINT'),
     responsePath: [],
+    processResponse: () => undefined,
+  },
+  [Networks.zkSync]: {
+    endpoint: util.getEnv('ZKSYNC_HEALTH_ENDPOINT'),
+    responsePath: [],
+    processResponse: () => undefined,
   },
 }
+
+const defaultProcessResponse = (data: unknown, network: Networks) =>
+  !!Requester.getResult(data, HEALTH_ENDPOINTS[network]?.responsePath)
 
 export interface ExtendedConfig extends Config {
   deltaBlocks: number

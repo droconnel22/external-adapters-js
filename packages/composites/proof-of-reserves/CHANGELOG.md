@@ -1,5 +1,384 @@
 # @chainlink/proof-of-reserves-adapter
 
+## 1.23.0
+
+### Minor Changes
+
+- [#3551](https://github.com/smartcontractkit/external-adapters-js/pull/3551) [`c7b5a90`](https://github.com/smartcontractkit/external-adapters-js/commit/c7b5a9033589de62006eddf078e5ab4c289e281d) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Add ability to select endpoint for protocol
+
+### Patch Changes
+
+- [#3558](https://github.com/smartcontractkit/external-adapters-js/pull/3558) [`62f0f3b`](https://github.com/smartcontractkit/external-adapters-js/commit/62f0f3b031052e808224b80f7cfce4073c967664) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- [#3562](https://github.com/smartcontractkit/external-adapters-js/pull/3562) [`8cc19c5`](https://github.com/smartcontractkit/external-adapters-js/commit/8cc19c591a7db6764d49290c14aa8bbdb8eef54d) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- Updated dependencies [[`62f0f3b`](https://github.com/smartcontractkit/external-adapters-js/commit/62f0f3b031052e808224b80f7cfce4073c967664), [`8cc19c5`](https://github.com/smartcontractkit/external-adapters-js/commit/8cc19c591a7db6764d49290c14aa8bbdb8eef54d), [`5f0ae26`](https://github.com/smartcontractkit/external-adapters-js/commit/5f0ae2696a43a6c3fefb4ac0004a5914c9f86694), [`c7b5a90`](https://github.com/smartcontractkit/external-adapters-js/commit/c7b5a9033589de62006eddf078e5ab4c289e281d)]:
+  - @chainlink/multi-address-list-adapter@1.0.7
+  - @chainlink/stader-address-list-adapter@2.3.27
+  - @chainlink/eth-beacon-adapter@3.0.8
+  - @chainlink/gemini-adapter@3.0.20
+  - @chainlink/por-indexer-adapter@2.1.11
+  - @chainlink/stader-balance-adapter@1.4.24
+  - @chainlink/avalanche-platform-adapter@2.0.21
+  - @chainlink/lotus-adapter@3.0.20
+  - @chainlink/por-address-list-adapter@5.3.0
+  - @chainlink/moonbeam-address-list-adapter@1.1.37
+  - @chainlink/wbtc-address-set-adapter@2.1.10
+  - @chainlink/polkadot-balance-adapter@1.3.16
+  - @chainlink/coinbase-prime-adapter@1.2.9
+  - @chainlink/ignition-address-list-adapter@1.0.3
+  - @chainlink/renvm-address-set-adapter@1.5.89
+
+## 1.22.3
+
+### Patch Changes
+
+- [#3533](https://github.com/smartcontractkit/external-adapters-js/pull/3533) [`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5) Thanks [@renovate](https://github.com/apps/renovate)! - Bump @types/node version
+
+- [#3534](https://github.com/smartcontractkit/external-adapters-js/pull/3534) [`d8023b9`](https://github.com/smartcontractkit/external-adapters-js/commit/d8023b911fd37ccdc2b41788b072fb9c875fff31) Thanks [@renovate](https://github.com/apps/renovate)! - Bump nock
+
+- Updated dependencies [[`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5), [`d8023b9`](https://github.com/smartcontractkit/external-adapters-js/commit/d8023b911fd37ccdc2b41788b072fb9c875fff31), [`876b8ba`](https://github.com/smartcontractkit/external-adapters-js/commit/876b8ba9472009f843076d3d25588b6c89bd489c)]:
+  - @chainlink/moonbeam-address-list-adapter@1.1.36
+  - @chainlink/celsius-address-list-adapter@2.0.20
+  - @chainlink/chain-reserve-wallet-adapter@3.0.20
+  - @chainlink/bitcoin-json-rpc-adapter@1.3.36
+  - @chainlink/stader-address-list-adapter@2.3.26
+  - @chainlink/avalanche-platform-adapter@2.0.20
+  - @chainlink/swell-address-list-adapter@1.0.19
+  - @chainlink/renvm-address-set-adapter@1.5.88
+  - @chainlink/polkadot-balance-adapter@1.3.15
+  - @chainlink/por-address-list-adapter@5.2.2
+  - @chainlink/wbtc-address-set-adapter@2.1.9
+  - @chainlink/blockchain.com-adapter@1.3.36
+  - @chainlink/coinbase-prime-adapter@1.2.8
+  - @chainlink/stader-balance-adapter@1.4.23
+  - @chainlink/reduce-adapter@1.4.23
+  - @chainlink/ada-balance-adapter@2.5.36
+  - @chainlink/blockcypher-adapter@1.4.36
+  - @chainlink/eth-balance-adapter@2.0.20
+  - @chainlink/por-indexer-adapter@2.1.10
+  - @chainlink/blockchair-adapter@1.3.36
+  - @chainlink/cryptoapis-adapter@1.2.36
+  - @chainlink/eth-beacon-adapter@3.0.7
+  - @chainlink/ea-test-helpers@1.4.5
+  - @chainlink/amberdata-adapter@1.8.29
+  - @chainlink/btc.com-adapter@1.3.36
+  - @chainlink/sochain-adapter@1.3.36
+  - @chainlink/wrapped-adapter@2.2.36
+  - @chainlink/ea-bootstrap@2.29.2
+  - @chainlink/gemini-adapter@3.0.19
+  - @chainlink/lotus-adapter@3.0.19
+  - @chainlink/multi-address-list-adapter@1.0.6
+  - @chainlink/ignition-address-list-adapter@1.0.2
+
+## 1.22.2
+
+### Patch Changes
+
+- [#3530](https://github.com/smartcontractkit/external-adapters-js/pull/3530) [`690c025`](https://github.com/smartcontractkit/external-adapters-js/commit/690c025c0a3e0863679418d26dc41c8b662978d8) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- [#3260](https://github.com/smartcontractkit/external-adapters-js/pull/3260) [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627) Thanks [@renovate](https://github.com/apps/renovate)! - Bump TS version
+
+- Updated dependencies [[`690c025`](https://github.com/smartcontractkit/external-adapters-js/commit/690c025c0a3e0863679418d26dc41c8b662978d8), [`c4f3faa`](https://github.com/smartcontractkit/external-adapters-js/commit/c4f3faab64277b24d4ab0f612da85cadea85987f), [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627), [`056ca36`](https://github.com/smartcontractkit/external-adapters-js/commit/056ca36cc51772f3e0cda1db8d6edd7e4a333db6)]:
+  - @chainlink/multi-address-list-adapter@1.0.5
+  - @chainlink/stader-address-list-adapter@2.3.25
+  - @chainlink/eth-beacon-adapter@3.0.6
+  - @chainlink/gemini-adapter@3.0.18
+  - @chainlink/por-indexer-adapter@2.1.9
+  - @chainlink/stader-balance-adapter@1.4.22
+  - @chainlink/avalanche-platform-adapter@2.0.19
+  - @chainlink/lotus-adapter@3.0.18
+  - @chainlink/por-address-list-adapter@5.2.1
+  - @chainlink/moonbeam-address-list-adapter@1.1.35
+  - @chainlink/wbtc-address-set-adapter@2.1.8
+  - @chainlink/polkadot-balance-adapter@1.3.14
+  - @chainlink/coinbase-prime-adapter@1.2.7
+  - @chainlink/ignition-address-list-adapter@1.0.1
+  - @chainlink/celsius-address-list-adapter@2.0.19
+  - @chainlink/chain-reserve-wallet-adapter@3.0.19
+  - @chainlink/bitcoin-json-rpc-adapter@1.3.35
+  - @chainlink/swell-address-list-adapter@1.0.18
+  - @chainlink/renvm-address-set-adapter@1.5.87
+  - @chainlink/blockchain.com-adapter@1.3.35
+  - @chainlink/reduce-adapter@1.4.22
+  - @chainlink/ada-balance-adapter@2.5.35
+  - @chainlink/blockcypher-adapter@1.4.35
+  - @chainlink/eth-balance-adapter@2.0.19
+  - @chainlink/blockchair-adapter@1.3.35
+  - @chainlink/cryptoapis-adapter@1.2.35
+  - @chainlink/ea-test-helpers@1.4.4
+  - @chainlink/amberdata-adapter@1.8.28
+  - @chainlink/btc.com-adapter@1.3.35
+  - @chainlink/sochain-adapter@1.3.35
+  - @chainlink/wrapped-adapter@2.2.35
+  - @chainlink/ea-bootstrap@2.29.1
+
+## 1.22.1
+
+### Patch Changes
+
+- Updated dependencies [[`9cb8367`](https://github.com/smartcontractkit/external-adapters-js/commit/9cb8367d566a7540c36e4a2133dea5aad27bf212)]:
+  - @chainlink/ea-bootstrap@2.29.0
+  - @chainlink/bitcoin-json-rpc-adapter@1.3.34
+  - @chainlink/ea-test-helpers@1.4.3
+  - @chainlink/reduce-adapter@1.4.21
+  - @chainlink/ada-balance-adapter@2.5.34
+  - @chainlink/amberdata-adapter@1.8.27
+  - @chainlink/blockchain.com-adapter@1.3.34
+  - @chainlink/blockchair-adapter@1.3.34
+  - @chainlink/blockcypher-adapter@1.4.34
+  - @chainlink/btc.com-adapter@1.3.34
+  - @chainlink/celsius-address-list-adapter@2.0.18
+  - @chainlink/chain-reserve-wallet-adapter@3.0.18
+  - @chainlink/cryptoapis-adapter@1.2.34
+  - @chainlink/eth-balance-adapter@2.0.18
+  - @chainlink/renvm-address-set-adapter@1.5.86
+  - @chainlink/sochain-adapter@1.3.34
+  - @chainlink/swell-address-list-adapter@1.0.17
+  - @chainlink/wrapped-adapter@2.2.34
+
+## 1.22.0
+
+### Minor Changes
+
+- [#3485](https://github.com/smartcontractkit/external-adapters-js/pull/3485) [`fba3273`](https://github.com/smartcontractkit/external-adapters-js/commit/fba32731f50d908717ce32537f8df3c763ad833a) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Add ignition address list
+
+### Patch Changes
+
+- [#3480](https://github.com/smartcontractkit/external-adapters-js/pull/3480) [`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- Updated dependencies [[`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c), [`fba3273`](https://github.com/smartcontractkit/external-adapters-js/commit/fba32731f50d908717ce32537f8df3c763ad833a), [`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c), [`78f9b06`](https://github.com/smartcontractkit/external-adapters-js/commit/78f9b0664d96551f6a239951c60d4a907ddfe0d9), [`2c75000`](https://github.com/smartcontractkit/external-adapters-js/commit/2c7500055fa2e736fee811896723f297f8faf60e), [`fff0c6c`](https://github.com/smartcontractkit/external-adapters-js/commit/fff0c6c2c48ea71b109253712d5400b546bc68cc)]:
+  - @chainlink/multi-address-list-adapter@1.0.4
+  - @chainlink/stader-address-list-adapter@2.3.24
+  - @chainlink/eth-beacon-adapter@3.0.5
+  - @chainlink/gemini-adapter@3.0.17
+  - @chainlink/por-indexer-adapter@2.1.8
+  - @chainlink/avalanche-platform-adapter@2.0.18
+  - @chainlink/lotus-adapter@3.0.17
+  - @chainlink/por-address-list-adapter@5.2.0
+  - @chainlink/moonbeam-address-list-adapter@1.1.34
+  - @chainlink/wbtc-address-set-adapter@2.1.7
+  - @chainlink/polkadot-balance-adapter@1.3.13
+  - @chainlink/coinbase-prime-adapter@1.2.6
+  - @chainlink/ignition-address-list-adapter@1.0.0
+  - @chainlink/stader-balance-adapter@1.4.21
+  - @chainlink/ea-bootstrap@2.28.0
+  - @chainlink/ada-balance-adapter@2.5.33
+  - @chainlink/renvm-address-set-adapter@1.5.85
+  - @chainlink/bitcoin-json-rpc-adapter@1.3.33
+  - @chainlink/ea-test-helpers@1.4.3
+  - @chainlink/reduce-adapter@1.4.20
+  - @chainlink/amberdata-adapter@1.8.26
+  - @chainlink/blockchain.com-adapter@1.3.33
+  - @chainlink/blockchair-adapter@1.3.33
+  - @chainlink/blockcypher-adapter@1.4.33
+  - @chainlink/btc.com-adapter@1.3.33
+  - @chainlink/celsius-address-list-adapter@2.0.17
+  - @chainlink/chain-reserve-wallet-adapter@3.0.17
+  - @chainlink/cryptoapis-adapter@1.2.33
+  - @chainlink/eth-balance-adapter@2.0.17
+  - @chainlink/sochain-adapter@1.3.33
+  - @chainlink/swell-address-list-adapter@1.0.16
+  - @chainlink/wrapped-adapter@2.2.33
+
+## 1.21.3
+
+### Patch Changes
+
+- [#3460](https://github.com/smartcontractkit/external-adapters-js/pull/3460) [`2fd3620`](https://github.com/smartcontractkit/external-adapters-js/commit/2fd362051a0b8f9b1c0c564ade41780fcf9f379b) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- Updated dependencies [[`2fd3620`](https://github.com/smartcontractkit/external-adapters-js/commit/2fd362051a0b8f9b1c0c564ade41780fcf9f379b)]:
+  - @chainlink/multi-address-list-adapter@1.0.3
+  - @chainlink/stader-address-list-adapter@2.3.23
+  - @chainlink/eth-beacon-adapter@3.0.4
+  - @chainlink/gemini-adapter@3.0.16
+  - @chainlink/por-indexer-adapter@2.1.7
+  - @chainlink/stader-balance-adapter@1.4.20
+  - @chainlink/avalanche-platform-adapter@2.0.17
+  - @chainlink/lotus-adapter@3.0.16
+  - @chainlink/por-address-list-adapter@5.1.8
+  - @chainlink/moonbeam-address-list-adapter@1.1.33
+  - @chainlink/wbtc-address-set-adapter@2.1.6
+  - @chainlink/polkadot-balance-adapter@1.3.12
+  - @chainlink/coinbase-prime-adapter@1.2.5
+  - @chainlink/renvm-address-set-adapter@1.5.84
+
+## 1.21.2
+
+### Patch Changes
+
+- [#3436](https://github.com/smartcontractkit/external-adapters-js/pull/3436) [`9a4d510`](https://github.com/smartcontractkit/external-adapters-js/commit/9a4d510dff13669760a91738dbe7df524f077483) Thanks [@karen-stepanyan](https://github.com/karen-stepanyan)! - Bumped framework version
+
+- Updated dependencies [[`9a4d510`](https://github.com/smartcontractkit/external-adapters-js/commit/9a4d510dff13669760a91738dbe7df524f077483)]:
+  - @chainlink/multi-address-list-adapter@1.0.2
+  - @chainlink/stader-address-list-adapter@2.3.22
+  - @chainlink/eth-beacon-adapter@3.0.3
+  - @chainlink/gemini-adapter@3.0.15
+  - @chainlink/por-indexer-adapter@2.1.6
+  - @chainlink/stader-balance-adapter@1.4.19
+  - @chainlink/avalanche-platform-adapter@2.0.16
+  - @chainlink/lotus-adapter@3.0.15
+  - @chainlink/por-address-list-adapter@5.1.7
+  - @chainlink/moonbeam-address-list-adapter@1.1.32
+  - @chainlink/wbtc-address-set-adapter@2.1.5
+  - @chainlink/polkadot-balance-adapter@1.3.11
+  - @chainlink/coinbase-prime-adapter@1.2.4
+  - @chainlink/renvm-address-set-adapter@1.5.83
+
+## 1.21.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @chainlink/multi-address-list-adapter@1.0.1
+  - @chainlink/renvm-address-set-adapter@1.5.82
+
+## 1.21.0
+
+### Minor Changes
+
+- [#3423](https://github.com/smartcontractkit/external-adapters-js/pull/3423) [`0a439f6`](https://github.com/smartcontractkit/external-adapters-js/commit/0a439f6d8c9d34c5455f633a3f2456bda6a35d0c) Thanks [@karen-stepanyan](https://github.com/karen-stepanyan)! - Added support for multi_address_list protocol
+
+### Patch Changes
+
+- Updated dependencies [[`0a439f6`](https://github.com/smartcontractkit/external-adapters-js/commit/0a439f6d8c9d34c5455f633a3f2456bda6a35d0c), [`0a439f6`](https://github.com/smartcontractkit/external-adapters-js/commit/0a439f6d8c9d34c5455f633a3f2456bda6a35d0c)]:
+  - @chainlink/multi-address-list-adapter@1.0.0
+  - @chainlink/coinbase-prime-adapter@1.2.3
+  - @chainlink/renvm-address-set-adapter@1.5.81
+
+## 1.20.6
+
+### Patch Changes
+
+- [#3415](https://github.com/smartcontractkit/external-adapters-js/pull/3415) [`8d83d60`](https://github.com/smartcontractkit/external-adapters-js/commit/8d83d60953e04b1f797f21f1504a3976ea0a4f36) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- Updated dependencies [[`8d83d60`](https://github.com/smartcontractkit/external-adapters-js/commit/8d83d60953e04b1f797f21f1504a3976ea0a4f36)]:
+  - @chainlink/stader-address-list-adapter@2.3.21
+  - @chainlink/eth-beacon-adapter@3.0.2
+  - @chainlink/gemini-adapter@3.0.14
+  - @chainlink/por-indexer-adapter@2.1.5
+  - @chainlink/stader-balance-adapter@1.4.18
+  - @chainlink/avalanche-platform-adapter@2.0.15
+  - @chainlink/lotus-adapter@3.0.14
+  - @chainlink/por-address-list-adapter@5.1.6
+  - @chainlink/moonbeam-address-list-adapter@1.1.31
+  - @chainlink/wbtc-address-set-adapter@2.1.4
+  - @chainlink/polkadot-balance-adapter@1.3.10
+  - @chainlink/coinbase-prime-adapter@1.2.2
+  - @chainlink/renvm-address-set-adapter@1.5.80
+
+## 1.20.5
+
+### Patch Changes
+
+- Updated dependencies [[`d704dc5`](https://github.com/smartcontractkit/external-adapters-js/commit/d704dc519670f7b5510cf02bb6cb94e8712db65a)]:
+  - @chainlink/por-indexer-adapter@2.1.4
+  - @chainlink/renvm-address-set-adapter@1.5.79
+
+## 1.20.4
+
+### Patch Changes
+
+- [#3372](https://github.com/smartcontractkit/external-adapters-js/pull/3372) [`d08f378`](https://github.com/smartcontractkit/external-adapters-js/commit/d08f378e44e3f9587861421066163325c621d150) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- Updated dependencies [[`d08f378`](https://github.com/smartcontractkit/external-adapters-js/commit/d08f378e44e3f9587861421066163325c621d150)]:
+  - @chainlink/stader-address-list-adapter@2.3.20
+  - @chainlink/eth-beacon-adapter@3.0.1
+  - @chainlink/gemini-adapter@3.0.13
+  - @chainlink/por-indexer-adapter@2.1.3
+  - @chainlink/stader-balance-adapter@1.4.17
+  - @chainlink/avalanche-platform-adapter@2.0.14
+  - @chainlink/lotus-adapter@3.0.13
+  - @chainlink/por-address-list-adapter@5.1.5
+  - @chainlink/moonbeam-address-list-adapter@1.1.30
+  - @chainlink/wbtc-address-set-adapter@2.1.3
+  - @chainlink/polkadot-balance-adapter@1.3.9
+  - @chainlink/coinbase-prime-adapter@1.2.1
+  - @chainlink/renvm-address-set-adapter@1.5.78
+
+## 1.20.3
+
+### Patch Changes
+
+- [#3350](https://github.com/smartcontractkit/external-adapters-js/pull/3350) [`6518e4d`](https://github.com/smartcontractkit/external-adapters-js/commit/6518e4dc6baca3c6289c595e29d48e149824054d) Thanks [@austinborn](https://github.com/austinborn)! - Bumped framework version
+
+- Updated dependencies [[`2098f53`](https://github.com/smartcontractkit/external-adapters-js/commit/2098f53787f2b1c457c25e08ec3a24e699604b22), [`732cf4c`](https://github.com/smartcontractkit/external-adapters-js/commit/732cf4c4ecb7f9167e86a4a788d0ca88ebeab699), [`6518e4d`](https://github.com/smartcontractkit/external-adapters-js/commit/6518e4dc6baca3c6289c595e29d48e149824054d)]:
+  - @chainlink/coinbase-prime-adapter@1.2.0
+  - @chainlink/eth-beacon-adapter@3.0.0
+  - @chainlink/stader-address-list-adapter@2.3.19
+  - @chainlink/gemini-adapter@3.0.12
+  - @chainlink/por-indexer-adapter@2.1.2
+  - @chainlink/stader-balance-adapter@1.4.16
+  - @chainlink/avalanche-platform-adapter@2.0.13
+  - @chainlink/lotus-adapter@3.0.12
+  - @chainlink/por-address-list-adapter@5.1.4
+  - @chainlink/moonbeam-address-list-adapter@1.1.29
+  - @chainlink/wbtc-address-set-adapter@2.1.2
+  - @chainlink/polkadot-balance-adapter@1.3.8
+  - @chainlink/renvm-address-set-adapter@1.5.77
+
+## 1.20.2
+
+### Patch Changes
+
+- [#3344](https://github.com/smartcontractkit/external-adapters-js/pull/3344) [`9f98cbf`](https://github.com/smartcontractkit/external-adapters-js/commit/9f98cbf6f7418d563f7165e97748680ec6b82b58) Thanks [@mjk90](https://github.com/mjk90)! - Bumped framework version
+
+- Updated dependencies [[`9f98cbf`](https://github.com/smartcontractkit/external-adapters-js/commit/9f98cbf6f7418d563f7165e97748680ec6b82b58)]:
+  - @chainlink/stader-address-list-adapter@2.3.18
+  - @chainlink/eth-beacon-adapter@2.0.13
+  - @chainlink/gemini-adapter@3.0.11
+  - @chainlink/por-indexer-adapter@2.1.1
+  - @chainlink/stader-balance-adapter@1.4.15
+  - @chainlink/avalanche-platform-adapter@2.0.12
+  - @chainlink/lotus-adapter@3.0.11
+  - @chainlink/por-address-list-adapter@5.1.3
+  - @chainlink/moonbeam-address-list-adapter@1.1.28
+  - @chainlink/wbtc-address-set-adapter@2.1.1
+  - @chainlink/polkadot-balance-adapter@1.3.7
+  - @chainlink/coinbase-prime-adapter@1.1.2
+  - @chainlink/renvm-address-set-adapter@1.5.76
+
+## 1.20.1
+
+### Patch Changes
+
+- Updated dependencies [[`9a0702e`](https://github.com/smartcontractkit/external-adapters-js/commit/9a0702ee8629271ea82b464fd4542d8b85c3895a), [`e4bd1d9`](https://github.com/smartcontractkit/external-adapters-js/commit/e4bd1d9ec1ec6c98c13691acc22b86a13ed787f1)]:
+  - @chainlink/wbtc-address-set-adapter@2.1.0
+  - @chainlink/por-indexer-adapter@2.1.0
+  - @chainlink/renvm-address-set-adapter@1.5.75
+
+## 1.20.0
+
+### Minor Changes
+
+- [#3334](https://github.com/smartcontractkit/external-adapters-js/pull/3334) [`9bd559a`](https://github.com/smartcontractkit/external-adapters-js/commit/9bd559a4cd1edacd7bfd9ee65fda6ec1b64251dc) Thanks [@karen-stepanyan](https://github.com/karen-stepanyan)! - Added support for COINBASE_PRIME_ETH protocol input param
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @chainlink/renvm-address-set-adapter@1.5.74
+
+## 1.19.1
+
+### Patch Changes
+
+- [#3324](https://github.com/smartcontractkit/external-adapters-js/pull/3324) [`459c6f2`](https://github.com/smartcontractkit/external-adapters-js/commit/459c6f22acc97fb741d13a342a6aae68d6e63480) Thanks [@alecgard](https://github.com/alecgard)! - Bumped framework version
+
+- Updated dependencies [[`459c6f2`](https://github.com/smartcontractkit/external-adapters-js/commit/459c6f22acc97fb741d13a342a6aae68d6e63480)]:
+  - @chainlink/stader-address-list-adapter@2.3.17
+  - @chainlink/eth-beacon-adapter@2.0.12
+  - @chainlink/gemini-adapter@3.0.10
+  - @chainlink/por-indexer-adapter@2.0.10
+  - @chainlink/stader-balance-adapter@1.4.14
+  - @chainlink/avalanche-platform-adapter@2.0.11
+  - @chainlink/lotus-adapter@3.0.10
+  - @chainlink/por-address-list-adapter@5.1.2
+  - @chainlink/moonbeam-address-list-adapter@1.1.27
+  - @chainlink/wbtc-address-set-adapter@2.0.11
+  - @chainlink/polkadot-balance-adapter@1.3.6
+  - @chainlink/coinbase-prime-adapter@1.1.1
+  - @chainlink/renvm-address-set-adapter@1.5.73
+
 ## 1.19.0
 
 ### Minor Changes

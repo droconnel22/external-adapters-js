@@ -183,7 +183,8 @@ export const deployAdapter = (config: Inputs): void => {
   )
   if (deployHelm.code !== 0) {
     process.exitCode = 1
-    throw red.bold(`Failed to deploy the external adapter: ${deployHelm.toString()}`)
+    throw red.bold(`Failed to deploy the external adapter: ${deployHelm.toString()}. Please double check that test-payload.json
+ is correct as well as adapter-secrets repo contains the correct env variables`)
   }
 }
 

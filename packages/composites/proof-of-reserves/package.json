@@ -1,6 +1,6 @@
 {
   "name": "@chainlink/proof-of-reserves-adapter",
-  "version": "1.19.0",
+  "version": "1.23.0",
   "description": "Chainlink BTC Proof of Reserves composite adapter. Combines multiple adapters to find total balance in custody for wBTC or renBTC.",
   "keywords": [
     "Chainlink",
@@ -48,8 +48,10 @@
     "@chainlink/eth-balance-adapter": "workspace:*",
     "@chainlink/eth-beacon-adapter": "workspace:*",
     "@chainlink/gemini-adapter": "workspace:*",
+    "@chainlink/ignition-address-list-adapter": "workspace:*",
     "@chainlink/lotus-adapter": "workspace:*",
     "@chainlink/moonbeam-address-list-adapter": "workspace:*",
+    "@chainlink/multi-address-list-adapter": "workspace:*",
     "@chainlink/polkadot-balance-adapter": "workspace:*",
     "@chainlink/por-address-list-adapter": "workspace:*",
     "@chainlink/por-indexer-adapter": "workspace:*",
@@ -59,6 +61,7 @@
     "@chainlink/stader-address-list-adapter": "workspace:*",
     "@chainlink/stader-balance-adapter": "workspace:*",
     "@chainlink/swell-address-list-adapter": "workspace:*",
+    "@chainlink/token-balance-adapter": "workspace:*",
     "@chainlink/wbtc-address-set-adapter": "workspace:*",
     "@chainlink/wrapped-adapter": "workspace:*",
     "decimal.js": "^10.3.1",
@@ -66,12 +69,12 @@
     "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@chainlink/external-adapter-framework": "0.33.8",
+    "@chainlink/external-adapter-framework": "1.7.1",
     "@types/jest": "27.5.2",
-    "@types/node": "16.18.96",
+    "@types/node": "16.18.119",
     "@types/supertest": "2.0.16",
-    "nock": "13.5.4",
+    "nock": "13.5.5",
     "supertest": "6.2.4",
-    "typescript": "5.0.4"
+    "typescript": "5.6.3"
   }
 }

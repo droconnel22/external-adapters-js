@@ -1,5 +1,16 @@
 [
   {
+    "from": "CAD",
+    "to": "USD",
+    "includes": [
+      {
+        "from": "USD",
+        "to": "CAD",
+        "inverse": true
+      }
+    ]
+  },
+  {
     "from": "AED",
     "to": "USD",
     "includes": [
@@ -1393,6 +1404,17 @@
         "from": "USD",
         "to": "XOF",
         "inverse": true
+      }
+    ]
+  },
+  {
+    "from": "XPD",
+    "to": "USD",
+    "includes": [
+      {
+        "from": "USD",
+        "to": "XPD",
+        "inverse": false
       }
     ]
   },

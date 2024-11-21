@@ -36,7 +36,7 @@ jobs:
       tmp-branch: ${{ steps.push-branch.outputs.TMP_BRANCH }}
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 2
       - name: Set up and install dependencies
@@ -82,6 +82,7 @@ jobs:
       id-token: write
       contents: read
     strategy:
+      max-parallel: 20
       matrix: ${{fromJson(needs.calculate-changes.outputs.adapter-list)}}
     env:
       ECR_URL: ${{ secrets.SDLC_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION_ECR_PRIVATE }}.amazonaws.com
@@ -89,11 +90,11 @@ jobs:
       IMAGE_VERSION: ${{ matrix.adapter.version }}
     steps:
       - name: Check out code
-        uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ needs.calculate-changes.outputs.tmp-branch }}
       - name: Build the adapter image
-        uses: docker/build-push-action@2cdde995de11925a030ce8070c3d77a52ffcf1c0 # v5.3.0
+        uses: docker/build-push-action@4f58ea79222b3b9dc2c8bbdd6debcef730109a75 # v6.9.0
         with:
           context: .
           push: false
@@ -117,6 +118,9 @@ jobs:
 
   deploy:
     name: Trigger infra deployment
+    permissions:
+      id-token: write
+      contents: read
     runs-on: ubuntu-latest
     needs:
       - calculate-changes
@@ -127,6 +131,14 @@ jobs:
       ECR_URL: ${{ secrets.SDLC_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION_ECR_PRIVATE }}.amazonaws.com
       CHANGED_ADAPTERS: ${{ needs.calculate-changes.outputs.adapter-list }}
     steps:
+      - name: Setup GitHub Token
+        id: setup-github-token
+        uses: smartcontractkit/.github/actions/setup-github-token@9e7cc0779934cae4a9028b8588c9adb64d8ce68c # setup-github-token@0.1.2
+        with:
+          aws-role-arn: ${{ secrets.AWS_ROLE_ARN_FOR_INFRA_K8s_PAT }}
+          aws-lambda-url: ${{ secrets.GATI_LAMBDA_DATA_FEEDS_URL }}
+          aws-region: ${{ secrets.AWS_REGION }}
+          aws-role-duration-seconds: '1800' # this is optional and defaults to 900
       - name: Trigger Image Dispatcher
         run: >
           gh workflow run
@@ -135,7 +147,7 @@ jobs:
           -F imageRepos="$(echo $CHANGED_ADAPTERS | jq -r "\"$ECR_URL/adapters/\" + (.adapter | .[].shortName) + \"-adapter\"" | tr '\n' ' ')"
           -F gitRepo=${{ github.event.repository.name }}
         env:
-          GITHUB_TOKEN: ${{ secrets.INFRA_K8s_PAT }}
+          GITHUB_TOKEN: ${{ steps.setup-github-token.outputs.access-token }}
 
   cleanup:
     name: Clean up ephemeral items
@@ -146,7 +158,7 @@ jobs:
     if: always() && needs.calculate-changes.outputs.adapter-list != '[]'
     steps:
       - name: Check out code
-        uses: actions/checkout@44c2b7a8a4ea60a981eaca3cf939b5f4305c123b # v4.1.5
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ needs.calculate-changes.outputs.tmp-branch }}
       - name: Delete ephemeral branch

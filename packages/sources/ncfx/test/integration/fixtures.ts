@@ -18,6 +18,22 @@ export const mockCryptoResponse = {
   mid: 3106.9885,
 }
 
+export const mockCryptoResponseLwba = {
+  timestamp: '2022-08-01T07:15:54.909',
+  currencyPair: 'AVAX/USD',
+  bid: 28.1,
+  offer: 28.2,
+  mid: 28.15,
+}
+
+export const mockCryptoResponseLwbaInvariantViolation = {
+  timestamp: '2022-08-01T07:15:54.909',
+  currencyPair: 'BTC/USD',
+  bid: 3106.8495,
+  offer: 3105.1275,
+  mid: 3106.9885,
+}
+
 export const mockForexResponse = {
   USDAED: { price: 3.673, timestamp: '2022-08-01T07:14:54.909Z' },
   AUDUSD: { price: 0.70067, timestamp: '2022-08-01T07:14:53.604Z' },
@@ -111,6 +127,14 @@ export const mockForexResponse = {
   XPTUSD: { price: 903.67, timestamp: '2022-08-01T07:14:54.508Z' },
 }
 
+export const mockMarketStatusResponse = {
+  marketStatus: {
+    fx: 'open',
+    metals: 'closed',
+  },
+  timestamp: '2024-06-20T20:44:09.594Z',
+}
+
 export const mockCryptoWebSocketServer = (URL: string): MockWebsocketServer => {
   const mockWsServer = new MockWebsocketServer(URL, { mock: false })
   mockWsServer.on('connection', (socket) => {
@@ -118,6 +142,8 @@ export const mockCryptoWebSocketServer = (URL: string): MockWebsocketServer => {
     socket.on('message', () => {
       socket.send(JSON.stringify(subscribeResponse))
       socket.send(JSON.stringify(mockCryptoResponse))
+      socket.send(JSON.stringify(mockCryptoResponseLwba))
+      socket.send(JSON.stringify(mockCryptoResponseLwbaInvariantViolation))
     })
   })
   return mockWsServer
@@ -129,6 +155,16 @@ export const mockForexWebSocketServer = (URL: string): MockWebsocketServer => {
     socket.on('message', () => {
       socket.send(JSON.stringify(mockForexResponse))
     })
+  })
+  return mockWsServer
+}
+
+export const mockMarketStatusWebSocketServer = (URL: string): MockWebsocketServer => {
+  const mockWsServer = new MockWebsocketServer(URL, { mock: false })
+  mockWsServer.on('connection', (socket) => {
+    setTimeout(() => {
+      socket.send(JSON.stringify(mockMarketStatusResponse))
+    }, 0)
   })
   return mockWsServer
 }

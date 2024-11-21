@@ -19,10 +19,12 @@ export const supportedEndpoints = ['health']
 const defaultRequireTxFailure = {
   [Networks.Arbitrum]: false,
   [Networks.Base]: false,
+  [Networks.Linea]: false,
   [Networks.Metis]: false,
   [Networks.Optimism]: false,
   [Networks.Scroll]: false,
   [Networks.Starkware]: true,
+  [Networks.zkSync]: false,
 }
 
 export type TInputParameters = {
@@ -35,10 +37,12 @@ export const inputParameters: InputParameters<TInputParameters> = {
     options: [
       Networks.Arbitrum,
       Networks.Base,
+      Networks.Linea,
       Networks.Metis,
       Networks.Optimism,
       Networks.Scroll,
       Networks.Starkware,
+      Networks.zkSync,
     ],
   },
   requireTxFailure: {

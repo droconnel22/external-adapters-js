@@ -1,5 +1,95 @@
 # @chainlink/cryptocompare-adapter
 
+## 3.3.7
+
+### Patch Changes
+
+- [#3558](https://github.com/smartcontractkit/external-adapters-js/pull/3558) [`62f0f3b`](https://github.com/smartcontractkit/external-adapters-js/commit/62f0f3b031052e808224b80f7cfce4073c967664) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- [#3562](https://github.com/smartcontractkit/external-adapters-js/pull/3562) [`8cc19c5`](https://github.com/smartcontractkit/external-adapters-js/commit/8cc19c591a7db6764d49290c14aa8bbdb8eef54d) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 3.3.6
+
+### Patch Changes
+
+- [#3533](https://github.com/smartcontractkit/external-adapters-js/pull/3533) [`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5) Thanks [@renovate](https://github.com/apps/renovate)! - Bump @types/node version
+
+- [#3534](https://github.com/smartcontractkit/external-adapters-js/pull/3534) [`d8023b9`](https://github.com/smartcontractkit/external-adapters-js/commit/d8023b911fd37ccdc2b41788b072fb9c875fff31) Thanks [@renovate](https://github.com/apps/renovate)! - Bump nock
+
+## 3.3.5
+
+### Patch Changes
+
+- [#3530](https://github.com/smartcontractkit/external-adapters-js/pull/3530) [`690c025`](https://github.com/smartcontractkit/external-adapters-js/commit/690c025c0a3e0863679418d26dc41c8b662978d8) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+- [#3260](https://github.com/smartcontractkit/external-adapters-js/pull/3260) [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627) Thanks [@renovate](https://github.com/apps/renovate)! - Bump TS version
+
+## 3.3.4
+
+### Patch Changes
+
+- [#3480](https://github.com/smartcontractkit/external-adapters-js/pull/3480) [`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 3.3.3
+
+### Patch Changes
+
+- [#3460](https://github.com/smartcontractkit/external-adapters-js/pull/3460) [`2fd3620`](https://github.com/smartcontractkit/external-adapters-js/commit/2fd362051a0b8f9b1c0c564ade41780fcf9f379b) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 3.3.2
+
+### Patch Changes
+
+- [#3436](https://github.com/smartcontractkit/external-adapters-js/pull/3436) [`9a4d510`](https://github.com/smartcontractkit/external-adapters-js/commit/9a4d510dff13669760a91738dbe7df524f077483) Thanks [@karen-stepanyan](https://github.com/karen-stepanyan)! - Bumped framework version
+
+## 3.3.1
+
+### Patch Changes
+
+- [#3415](https://github.com/smartcontractkit/external-adapters-js/pull/3415) [`8d83d60`](https://github.com/smartcontractkit/external-adapters-js/commit/8d83d60953e04b1f797f21f1504a3976ea0a4f36) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 3.3.0
+
+### Minor Changes
+
+- [#3364](https://github.com/smartcontractkit/external-adapters-js/pull/3364) [`2beb3d2`](https://github.com/smartcontractkit/external-adapters-js/commit/2beb3d2b82c37491d618dd3e183a92ddd3c18a57) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Upgrade to a better default WS endpoint
+
+- [#3380](https://github.com/smartcontractkit/external-adapters-js/pull/3380) [`abc239b`](https://github.com/smartcontractkit/external-adapters-js/commit/abc239b59092bb3e0c3acdcc5a660607f7392552) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Use WS as default transport
+
+### Patch Changes
+
+- [#3372](https://github.com/smartcontractkit/external-adapters-js/pull/3372) [`d08f378`](https://github.com/smartcontractkit/external-adapters-js/commit/d08f378e44e3f9587861421066163325c621d150) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Bumped framework version
+
+## 3.2.0
+
+### Minor Changes
+
+- [#3356](https://github.com/smartcontractkit/external-adapters-js/pull/3356) [`8923e58`](https://github.com/smartcontractkit/external-adapters-js/commit/8923e588899f2449db9b0772091a8fb46b5fb390) Thanks [@austinborn](https://github.com/austinborn)! - Disable WS by default
+
+- [#3350](https://github.com/smartcontractkit/external-adapters-js/pull/3350) [`6518e4d`](https://github.com/smartcontractkit/external-adapters-js/commit/6518e4dc6baca3c6289c595e29d48e149824054d) Thanks [@austinborn](https://github.com/austinborn)! - Default WS_ENABLED=true
+
+### Patch Changes
+
+- [#3350](https://github.com/smartcontractkit/external-adapters-js/pull/3350) [`6518e4d`](https://github.com/smartcontractkit/external-adapters-js/commit/6518e4dc6baca3c6289c595e29d48e149824054d) Thanks [@austinborn](https://github.com/austinborn)! - Bumped framework version
+
+## 3.1.2
+
+### Patch Changes
+
+- [#3344](https://github.com/smartcontractkit/external-adapters-js/pull/3344) [`9f98cbf`](https://github.com/smartcontractkit/external-adapters-js/commit/9f98cbf6f7418d563f7165e97748680ec6b82b58) Thanks [@mjk90](https://github.com/mjk90)! - Bumped framework version
+
+## 3.1.1
+
+### Patch Changes
+
+- [#3324](https://github.com/smartcontractkit/external-adapters-js/pull/3324) [`459c6f2`](https://github.com/smartcontractkit/external-adapters-js/commit/459c6f22acc97fb741d13a342a6aae68d6e63480) Thanks [@alecgard](https://github.com/alecgard)! - Bumped framework version
+
+## 3.1.0
+
+### Minor Changes
+
+- [#3300](https://github.com/smartcontractkit/external-adapters-js/pull/3300) [`8b2c4ea`](https://github.com/smartcontractkit/external-adapters-js/commit/8b2c4ea2f6ec21b253af3c0f9cb928430e22c798) Thanks [@alecgard](https://github.com/alecgard)! - Log unexpected messages warning
+
 ## 3.0.0
 
 ### Major Changes

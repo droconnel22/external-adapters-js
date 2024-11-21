@@ -3,7 +3,6 @@
 const environmentVariables = [
   { envKey: '1FORGE_ADAPTER_URL', value: '1forge' },
   { envKey: 'ALPHACHAIN_ADAPTER_URL', value: 'alphachain' },
-  { envKey: 'ALPHAVANTAGE_ADAPTER_URL', value: 'alphavantage' },
   { envKey: 'AMBERDATA_ADAPTER_URL', value: 'amberdata' },
   { envKey: 'ANYBLOCK', value: 'anyblock' },
   { envKey: 'BINANCE_ADAPTER_URL', value: 'binance' },
@@ -64,7 +63,6 @@ const environmentVariables = [
   { envKey: 'ORCHID_BANDWIDTH_ADAPTER_URL', value: 'orchid_bandwidth' },
   { envKey: 'PAXOS_ADAPTER_URL', value: 'paxos' },
   { envKey: 'PAYPAL_ADAPTER_URL', value: 'paypal' },
-  { envKey: 'POA_ADAPTER_URL', value: 'poa' },
   { envKey: 'POLYGON_ADAPTER_URL', value: 'polygon' },
   { envKey: 'REDUCE_ADAPTER_URL', value: 'reduce' },
   { envKey: 'RENVM_ADAPTER_URL', value: 'renvm' },

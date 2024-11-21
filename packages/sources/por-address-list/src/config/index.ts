@@ -8,7 +8,7 @@ export const config = new AdapterConfig({
     required: true,
   },
   CHAIN_ID: {
-    description: 'The chain id to connect to',
+    description: 'The chain id to connect to for the RPC URL',
     type: 'number',
     default: 1,
   },
@@ -23,5 +23,15 @@ export const config = new AdapterConfig({
       'The amount of time the background execute should sleep before performing the next request',
     type: 'number',
     default: 10_000,
+  },
+  BEDROCK_UNIBTC_API_ENDPOINT: {
+    description: 'An API endpoint for Bedrock uniBTC native BTC wallet address',
+    type: 'string',
+    default: 'https://bedrock-datacenter.rockx.com/data/tvl/reserve_with_native.json',
+  },
+  SOLVBTC_API_ENDPOINT: {
+    description: 'An API endpoint for SolvBTC native BTC wallet address',
+    type: 'string',
+    default: 'https://solv-btcaddress-test.s3.us-east-1.amazonaws.com/solv-btc-addresses.json',
   },
 })

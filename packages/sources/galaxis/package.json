@@ -1,6 +1,6 @@
 {
   "name": "@chainlink/galaxis-adapter",
-  "version": "4.0.9",
+  "version": "4.0.13",
   "description": "Chainlink galaxis adapter.",
   "keywords": [
     "Chainlink",
@@ -30,17 +30,17 @@
   "dependencies": {
     "@chainlink/ea-bootstrap": "workspace:*",
     "@chainlink/ea-test-helpers": "workspace:*",
-    "@ethercards/ec-util": "^1.0.1",
+    "@ethercards/ec-util": "1.0.8",
     "ethers": "^5.5.1",
     "moment": "^2.29.4",
     "tslib": "^2.3.1"
   },
   "devDependencies": {
     "@types/jest": "27.5.2",
-    "@types/node": "16.18.96",
+    "@types/node": "16.18.119",
     "@types/supertest": "2.0.16",
-    "nock": "13.5.4",
+    "nock": "13.5.5",
     "supertest": "6.2.4",
-    "typescript": "5.0.4"
+    "typescript": "5.6.3"
   }
 }

@@ -203,6 +203,7 @@ describe('execute', () => {
   describe('scroll network', () => {
     it('should return success when all methods succeed', async () => {
       mockResponseSuccessBlock()
+      mockResponseSuccessHealth()
 
       const data: AdapterRequest = {
         id,
@@ -216,6 +217,7 @@ describe('execute', () => {
 
     it('should return transaction submission is successful', async () => {
       mockResponseFailureBlock()
+      mockResponseSuccessHealth()
 
       const data: AdapterRequest = {
         id,
@@ -230,6 +232,7 @@ describe('execute', () => {
 
     it('should return failure if tx not required even if it would be successful', async () => {
       mockResponseFailureBlock()
+      mockResponseFailureHealth()
 
       const data: AdapterRequest = {
         id,
@@ -243,6 +246,51 @@ describe('execute', () => {
     })
   })
 
+  describe('zksync network', () => {
+    it('should return success when all methods succeed', async () => {
+      mockResponseSuccessBlock()
+      mockResponseSuccessHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'zksync',
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 0)
+    })
+
+    it('should return transaction submission is successful', async () => {
+      mockResponseFailureBlock()
+      mockResponseSuccessHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'zksync',
+          requireTxFailure: true,
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 0)
+    })
+
+    it('should return failure if tx not required even if it would be successful', async () => {
+      mockResponseFailureBlock()
+      mockResponseFailureHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'zksync',
+          requireTxFailure: false,
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 1)
+    })
+  })
   describe('base network', () => {
     it('should return success when all methods succeed', async () => {
       mockResponseSuccessHealth()
@@ -281,6 +329,52 @@ describe('execute', () => {
         id,
         data: {
           network: 'base',
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 1)
+    })
+  })
+
+  describe('Linea network', () => {
+    it('should return success when all methods succeed', async () => {
+      mockResponseSuccessBlock()
+      mockResponseSuccessHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'linea',
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 0)
+    })
+
+    it('should return transaction submission is successful', async () => {
+      mockResponseFailureBlock()
+      mockResponseSuccessHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'linea',
+          requireTxFailure: true,
+        },
+      }
+
+      await sendRequestAndExpectStatus(data, 0)
+    })
+
+    it('should return failure if tx not required even if it would be successful', async () => {
+      mockResponseFailureBlock()
+      mockResponseFailureHealth()
+
+      const data: AdapterRequest = {
+        id,
+        data: {
+          network: 'linea',
+          requireTxFailure: false,
         },
       }
 

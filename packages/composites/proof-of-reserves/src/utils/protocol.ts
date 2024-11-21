@@ -20,6 +20,8 @@ import * as swellList from '@chainlink/swell-address-list-adapter'
 import { adapter as wBTC } from '@chainlink/wbtc-address-set-adapter'
 import * as wrapped from '@chainlink/wrapped-adapter'
 import { adapter as coinbasePrime } from '@chainlink/coinbase-prime-adapter'
+import { adapter as multiAddressList } from '@chainlink/multi-address-list-adapter'
+import { adapter as ignitionAddressList } from '@chainlink/ignition-address-list-adapter'
 
 export const LIST_ADAPTER = 'LIST'
 
@@ -39,9 +41,13 @@ export const adaptersV3: v3AdapterImplementation[] = [
   gemini,
   porAddressList,
   coinbasePrime,
+  multiAddressList,
+  ignitionAddressList,
 ]
 
-type AddressData = { token: string; chainId: string; network: string } | AddressList
+type AddressData = ({ token: string; chainId: string; network: string } | AddressList) & {
+  endpoint: string
+}
 
 type AddressList =
   | { addresses: string[]; chainId: string; network: string }
@@ -56,7 +62,12 @@ export const runProtocolAdapter = async (
   protocol: string,
   data: AddressData,
   config: Config,
+  protocolEndpoint?: string,
 ): Promise<AdapterResponse> => {
+  if (protocolEndpoint) {
+    data.endpoint = protocolEndpoint
+  }
+
   if (protocol === LIST_ADAPTER) return listAdapter(jobRunID, data)
 
   const execute = makeRequestFactory(config, protocol)

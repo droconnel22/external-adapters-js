@@ -18,6 +18,7 @@ export const supportedEndpoints = ['reserves']
 
 export type TInputParameters = {
   protocol: string
+  protocolEndpoint?: string
   indexer: string
   confirmations?: number
   addresses?: string[]
@@ -35,9 +36,15 @@ const inputParameters: InputParameters<TInputParameters> = {
       ...protocolAdaptersV2.map(({ NAME }) => NAME.toUpperCase()),
       ...protocolAdaptersV3.map(({ name }) => name.toLowerCase()),
       ...protocolAdaptersV3.map(({ name }) => name.toUpperCase()),
+      'coinbase_prime_eth',
+      'COINBASE_PRIME_ETH',
       'list',
       'LIST',
     ],
+  },
+  protocolEndpoint: {
+    type: 'string',
+    description: 'Optional endpoint for the protocol external adapter to use',
   },
   indexer: {
     required: true,
@@ -93,6 +100,7 @@ export const execute: ExecuteWithConfig<Config> = async (input, context, config)
     protocol,
     input.data as any,
     config,
+    validator.validated.data.protocolEndpoint,
   )
   const validatedAddresses = getValidAddresses(protocolOutput, validator)
   const balanceOutput = await runBalanceAdapter(

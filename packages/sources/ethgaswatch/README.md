@@ -1,6 +1,6 @@
 # Chainlink External Adapter for EthGasWatch
 
-![1.3.32](https://img.shields.io/github/package-json/v/smartcontractkit/external-adapters-js?filename=packages/sources/ethgaswatch/package.json) ![v2](https://img.shields.io/badge/framework%20version-v2-blueviolet)
+![1.3.36](https://img.shields.io/github/package-json/v/smartcontractkit/external-adapters-js?filename=packages/sources/ethgaswatch/package.json) ![v2](https://img.shields.io/badge/framework%20version-v2-blueviolet)
 
 Base URL https://ethgas.watch
 
@@ -105,15 +105,6 @@ Response:
         "standard": 148,
         "slow": 138,
         "lastBlock": 13684915
-      },
-      {
-        "name": "POA Network",
-        "source": "https://gasprice.poa.network/",
-        "instant": null,
-        "fast": 152,
-        "standard": null,
-        "slow": 127,
-        "lastBlock": null
       },
       {
         "name": "Upvest",

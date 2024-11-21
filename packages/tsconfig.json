@@ -63,7 +63,16 @@
       "path": "./composites/market-closure"
     },
     {
+      "path": "./composites/market-status"
+    },
+    {
       "path": "./composites/medianizer"
+    },
+    {
+      "path": "./composites/multi-address-list"
+    },
+    {
+      "path": "./composites/nexus-kiln"
     },
     {
       "path": "./composites/nftx"
@@ -135,13 +144,13 @@
       "path": "./sources/alphachain"
     },
     {
-      "path": "./sources/alphavantage"
-    },
-    {
       "path": "./sources/alpine"
     },
     {
       "path": "./sources/amberdata"
+    },
+    {
+      "path": "./sources/anchorage"
     },
     {
       "path": "./sources/anyblock"
@@ -166,6 +175,12 @@
     },
     {
       "path": "./sources/bitex"
+    },
+    {
+      "path": "./sources/bitgo"
+    },
+    {
+      "path": "./sources/bitgo-reserves"
     },
     {
       "path": "./sources/bitso"
@@ -273,6 +288,9 @@
       "path": "./sources/dar"
     },
     {
+      "path": "./sources/deep-blue"
+    },
+    {
       "path": "./sources/deribit"
     },
     {
@@ -324,6 +342,9 @@
       "path": "./sources/ethgaswatch"
     },
     {
+      "path": "./sources/expand-network"
+    },
+    {
       "path": "./sources/expert-car-broker"
     },
     {
@@ -340,6 +361,9 @@
     },
     {
       "path": "./sources/finnhub-secondary"
+    },
+    {
+      "path": "./sources/fireblocks"
     },
     {
       "path": "./sources/fixer"
@@ -393,6 +417,9 @@
       "path": "./sources/iex-cloud"
     },
     {
+      "path": "./sources/ignition-address-list"
+    },
+    {
       "path": "./sources/intrinio"
     },
     {
@@ -408,7 +435,13 @@
       "path": "./sources/json-rpc"
     },
     {
+      "path": "./sources/instruxi-sxt"
+    },
+    {
       "path": "./sources/kaiko"
+    },
+    {
+      "path": "./sources/kaiko-state"
     },
     {
       "path": "./sources/layer2-sequencer-health"
@@ -420,6 +453,9 @@
       "path": "./sources/lido"
     },
     {
+      "path": "./sources/lido-por"
+    },
+    {
       "path": "./sources/linkpool"
     },
     {
@@ -429,6 +465,9 @@
       "path": "./sources/lotus"
     },
     {
+      "path": "./sources/m0"
+    },
+    {
       "path": "./sources/marketstack"
     },
     {
@@ -436,6 +475,9 @@
     },
     {
       "path": "./sources/metalsapi"
+    },
+    {
+      "path": "./sources/mobula-state"
     },
     {
       "path": "./sources/mock-ea"
@@ -448,6 +490,9 @@
     },
     {
       "path": "./sources/mycryptoapi"
+    },
+    {
+      "path": "./sources/nav-consulting"
     },
     {
       "path": "./sources/ncfx"
@@ -480,9 +525,6 @@
       "path": "./sources/paypal"
     },
     {
-      "path": "./sources/poa"
-    },
-    {
       "path": "./sources/polkadot-balance"
     },
     {
@@ -496,6 +538,9 @@
     },
     {
       "path": "./sources/renvm-address-set"
+    },
+    {
+      "path": "./sources/s3-csv-reader"
     },
     {
       "path": "./sources/satoshitango"
@@ -525,13 +570,22 @@
       "path": "./sources/stader-labs"
     },
     {
+      "path": "./sources/starknet-gas-price"
+    },
+    {
       "path": "./sources/stasis"
+    },
+    {
+      "path": "./sources/superstate"
     },
     {
       "path": "./sources/swell-address-list"
     },
     {
       "path": "./sources/synthetix-debt-pool"
+    },
+    {
+      "path": "./sources/synthetix-feeds"
     },
     {
       "path": "./sources/taapi"
@@ -549,6 +603,12 @@
       "path": "./sources/tiingo"
     },
     {
+      "path": "./sources/tiingo-state"
+    },
+    {
+      "path": "./sources/token-balance"
+    },
+    {
       "path": "./sources/tp"
     },
     {
@@ -556,6 +616,9 @@
     },
     {
       "path": "./sources/tradingeconomics"
+    },
+    {
+      "path": "./sources/tradinghours"
     },
     {
       "path": "./sources/trueusd"
@@ -586,6 +649,9 @@
     },
     {
       "path": "./sources/view-function-multi-chain"
+    },
+    {
+      "path": "./sources/view-starknet-latest-answer"
     },
     {
       "path": "./sources/wbtc-address-set"

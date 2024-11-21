@@ -1,6 +1,6 @@
 {
   "name": "@chainlink/readme-test-adapter",
-  "version": "1.2.57",
+  "version": "1.2.61",
   "dependencies": {
     "@chainlink/ea-bootstrap": "workspace:*",
     "@chainlink/ea-factories": "workspace:*",
@@ -9,7 +9,7 @@
   "devDependencies": {
     "@types/jest": "27.5.2",
     "@types/supertest": "2.0.16",
-    "nock": "13.5.4",
+    "nock": "13.5.5",
     "supertest": "6.2.4"
   }
 }

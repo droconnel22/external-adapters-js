@@ -1,10 +1,16 @@
 # Chainlink External Adapter for Amberdata
 
-![1.8.25](https://img.shields.io/github/package-json/v/smartcontractkit/external-adapters-js?filename=packages/sources/amberdata/package.json) ![v2](https://img.shields.io/badge/framework%20version-v2-blueviolet)
+![1.8.29](https://img.shields.io/github/package-json/v/smartcontractkit/external-adapters-js?filename=packages/sources/amberdata/package.json) ![v2](https://img.shields.io/badge/framework%20version-v2-blueviolet)
 
 Base URL wss://ws.web3api.io
 
 This document was generated automatically. Please see [README Generator](../../scripts#readme-generator) for more info.
+
+## Known Issues
+
+### MAX_PAYLOAD_SIZE_LIMIT configuration
+
+The `MAX_PAYLOAD_SIZE_LIMIT` environment variable is used for controlling the maximum size of the incoming request body that the EA can handle. If you decide to customize this value it's essential to ensure that any reverse proxy or web server in front of the EA, such as Nginx, is also configured with a corresponding limit. This alignment prevents scenarios where Nginx rejects a request for exceeding its payload size limit before it reaches the EA.
 
 ## Environment Variables
 

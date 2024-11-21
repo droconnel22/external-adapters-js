@@ -45,6 +45,12 @@ export const sendEVMDummyTransaction = async (
       gasPrice: 0,
       to: wallet.address,
     },
+    [Networks.Linea]: {
+      value: 0,
+      gasLimit: 0,
+      gasPrice: 0,
+      to: wallet.address,
+    },
     [Networks.Metis]: {
       value: 0,
       gasLimit: 0,
@@ -52,6 +58,12 @@ export const sendEVMDummyTransaction = async (
       to: wallet.address,
     },
     [Networks.Scroll]: {
+      value: 0,
+      gasLimit: 0,
+      gasPrice: 0,
+      to: wallet.address,
+    },
+    [Networks.zkSync]: {
       value: 0,
       gasLimit: 0,
       gasPrice: 0,
@@ -78,11 +90,19 @@ const lastSeenBlock: Record<EVMNetworks, { block: number; timestamp: number }> =
     block: 0,
     timestamp: 0,
   },
+  [Networks.Linea]: {
+    block: 0,
+    timestamp: 0,
+  },
   [Networks.Metis]: {
     block: 0,
     timestamp: 0,
   },
   [Networks.Scroll]: {
+    block: 0,
+    timestamp: 0,
+  },
+  [Networks.zkSync]: {
     block: 0,
     timestamp: 0,
   },

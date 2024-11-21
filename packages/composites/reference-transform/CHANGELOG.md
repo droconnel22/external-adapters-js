@@ -1,5 +1,49 @@
 # @chainlink/reference-transform-adapter
 
+## 1.3.7
+
+### Patch Changes
+
+- [#3533](https://github.com/smartcontractkit/external-adapters-js/pull/3533) [`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5) Thanks [@renovate](https://github.com/apps/renovate)! - Bump @types/node version
+
+- Updated dependencies [[`563b976`](https://github.com/smartcontractkit/external-adapters-js/commit/563b976bd699a28e42120fdbcf730a1d4b5c2db5), [`876b8ba`](https://github.com/smartcontractkit/external-adapters-js/commit/876b8ba9472009f843076d3d25588b6c89bd489c)]:
+  - @chainlink/ea-reference-data-reader@1.3.36
+  - @chainlink/ea-bootstrap@2.29.2
+
+## 1.3.6
+
+### Patch Changes
+
+- [#3260](https://github.com/smartcontractkit/external-adapters-js/pull/3260) [`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627) Thanks [@renovate](https://github.com/apps/renovate)! - Bump TS version
+
+- [#3531](https://github.com/smartcontractkit/external-adapters-js/pull/3531) [`4a3e99f`](https://github.com/smartcontractkit/external-adapters-js/commit/4a3e99ff9c131984aaa272a9c91fe313e751cfcd) Thanks [@mxiao-cll](https://github.com/mxiao-cll)! - Remove POA EA
+
+- Updated dependencies [[`13cfd21`](https://github.com/smartcontractkit/external-adapters-js/commit/13cfd215dcbd14c31f173bd874da36d636434627)]:
+  - @chainlink/ea-reference-data-reader@1.3.35
+  - @chainlink/ea-bootstrap@2.29.1
+
+## 1.3.5
+
+### Patch Changes
+
+- Updated dependencies [[`9cb8367`](https://github.com/smartcontractkit/external-adapters-js/commit/9cb8367d566a7540c36e4a2133dea5aad27bf212)]:
+  - @chainlink/ea-bootstrap@2.29.0
+  - @chainlink/ea-reference-data-reader@1.3.34
+
+## 1.3.4
+
+### Patch Changes
+
+- Updated dependencies [[`13c68c5`](https://github.com/smartcontractkit/external-adapters-js/commit/13c68c550cd0131940c41eb28d2f257d68d6312c), [`78f9b06`](https://github.com/smartcontractkit/external-adapters-js/commit/78f9b0664d96551f6a239951c60d4a907ddfe0d9), [`2c75000`](https://github.com/smartcontractkit/external-adapters-js/commit/2c7500055fa2e736fee811896723f297f8faf60e)]:
+  - @chainlink/ea-bootstrap@2.28.0
+  - @chainlink/ea-reference-data-reader@1.3.33
+
+## 1.3.3
+
+### Patch Changes
+
+- [#3444](https://github.com/smartcontractkit/external-adapters-js/pull/3444) [`1f57b4a`](https://github.com/smartcontractkit/external-adapters-js/commit/1f57b4afae3a950263cf70f561d57f8cf8ebf627) Thanks [@mmcallister-cll](https://github.com/mmcallister-cll)! - Removed alphavantage EA
+
 ## 1.3.2
 
 ### Patch Changes

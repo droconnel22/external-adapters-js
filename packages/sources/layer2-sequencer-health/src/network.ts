@@ -16,6 +16,7 @@ const sequencerOnlineErrors: Record<Networks, string[]> = {
   // TODO: Optimism error needs to be confirmed by their team
   [Networks.Optimism]: ['cannot accept 0 gas price transaction'],
   [Networks.Base]: ['transaction underpriced'],
+  [Networks.Linea]: ['Gas price below configured minimum gas price'],
   [Networks.Metis]: ['cannot accept 0 gas price transaction'],
   [Networks.Scroll]: ['invalid transaction: insufficient funds for l1fee + gas * price + value'],
   // Sending an empty transaction to the dummy Starknet address should return one
@@ -26,6 +27,7 @@ const sequencerOnlineErrors: Record<Networks, string[]> = {
   // has not been deployed to the network. The OutOfRangeFee error is thrown when
   // the network detects a transaction sent with 0 gas.
   [Networks.Starkware]: ['Contract not found', 'Known(OutOfRangeFee)'],
+  [Networks.zkSync]: ['max fee per gas less than block base fee'],
 }
 
 export interface NetworkHealthCheck {
@@ -45,7 +47,10 @@ export const checkSequencerHealth: NetworkHealthCheck = async (
   const response = await Requester.request({
     url: HEALTH_ENDPOINTS[network]?.endpoint,
   })
-  const isHealthy = !!Requester.getResult(response.data, HEALTH_ENDPOINTS[network]?.responsePath)
+
+  // If the network has a custom response processing function, use it
+  const isHealthy = HEALTH_ENDPOINTS[network].processResponse(response.data)
+
   Logger.info(
     `[${network}] Health endpoint for network ${network} returned a ${
       isHealthy ? 'healthy' : 'unhealthy'
@@ -84,9 +89,11 @@ const isExpectedErrorMessage = (network: Networks, error: Error) => {
       [Networks.Arbitrum]: ['error', 'message'],
       [Networks.Optimism]: ['error', 'message'],
       [Networks.Base]: ['error', 'message'],
+      [Networks.Linea]: ['error', 'message'],
       [Networks.Metis]: ['error', 'message'],
       [Networks.Scroll]: ['error', 'error', 'message'],
       [Networks.Starkware]: ['message'],
+      [Networks.zkSync]: ['error', 'message'],
     }
     return (Requester.getResult(error, paths[network]) as string) || ''
   }
