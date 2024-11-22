@@ -211,6 +211,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/sources/ada-balance"\
     },\
     {\
+      "name": "@chainlink/aleno-adapter",\
+      "reference": "workspace:packages/sources/aleno"\
+    },\
+    {\
       "name": "@chainlink/alongside-adapter",\
       "reference": "workspace:packages/sources/alongside"\
     },\
@@ -942,6 +946,7 @@ const RAW_RUNTIME_STATE =
     ["@chainlink/accuweather-adapter", ["workspace:packages/sources/accuweather"]],\
     ["@chainlink/ada-balance-adapter", ["workspace:packages/sources/ada-balance"]],\
     ["@chainlink/agoric-adapter", ["workspace:packages/targets/agoric"]],\
+    ["@chainlink/aleno-adapter", ["workspace:packages/sources/aleno"]],\
     ["@chainlink/alongside-adapter", ["workspace:packages/sources/alongside"]],\
     ["@chainlink/alphachain-adapter", ["workspace:packages/sources/alphachain"]],\
     ["@chainlink/alpine-adapter", ["workspace:packages/sources/alpine"]],\
@@ -5222,6 +5227,21 @@ const RAW_RUNTIME_STATE =
           ["supertest", "npm:6.2.4"],\
           ["tslib", "npm:2.8.1"],\
           ["typescript", "patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@chainlink/aleno-adapter", [\
+      ["workspace:packages/sources/aleno", {\
+        "packageLocation": "./packages/sources/aleno/",\
+        "packageDependencies": [\
+          ["@chainlink/aleno-adapter", "workspace:packages/sources/aleno"],\
+          ["@chainlink/external-adapter-framework", "npm:1.7.1"],\
+          ["@types/jest", "npm:27.5.2"],\
+          ["@types/node", "npm:16.18.115"],\
+          ["nock", "npm:13.5.4"],\
+          ["tslib", "npm:2.4.1"],\
+          ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
         "linkType": "SOFT"\
       }]\
