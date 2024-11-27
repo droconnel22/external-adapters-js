@@ -5240,6 +5240,7 @@ const RAW_RUNTIME_STATE =
           ["@types/jest", "npm:27.5.2"],\
           ["@types/node", "npm:16.18.115"],\
           ["nock", "npm:13.5.4"],\
+          ["socket.io-client", "npm:4.8.1"],\
           ["tslib", "npm:2.4.1"],\
           ["typescript", "patch:typescript@npm%3A5.5.4#optional!builtin<compat/typescript>::version=5.5.4&hash=379a07"]\
         ],\
