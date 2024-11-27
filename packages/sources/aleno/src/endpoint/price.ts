@@ -5,7 +5,7 @@ import { TransportRoutes } from '@chainlink/external-adapter-framework/transport
 import { config } from '../config'
 
 import { httpTransport } from '../transport/price-http'
-// import { customSubscriptionTransport } from '../transport/price-custombg'
+import { socketioTransport } from '../transport/price-socketio'
 
 export const inputParameters = new InputParameters(
   {
@@ -24,13 +24,12 @@ export const inputParameters = new InputParameters(
   },
   [
     {
-      base: 'BTC',
+      base: 'FRAX',
       quote: 'USD',
     },
   ],
 )
 
-// Endpoints contain a type parameter that allows specifying relevant types of an endpoint, for example, request payload type, Adapter response type and Adapter configuration (environment variables) type
 export type BaseEndpointTypes = {
   Parameters: typeof inputParameters.definition
   Response: SingleNumberResultResponse
@@ -41,7 +40,8 @@ export const endpoint = new AdapterEndpoint({
   name: 'price',
   aliases: ['crypto', 'state'],
   transportRoutes: new TransportRoutes<BaseEndpointTypes>()
-    // .register('rest', httpTransport)  .register('custombg', customSubscriptionTransport),
-    .register('rest', httpTransport),
+    .register('rest', httpTransport)
+    .register('socketio', socketioTransport),
   inputParameters,
+  defaultTransport: 'socketio',
 })

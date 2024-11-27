@@ -56,13 +56,23 @@ export const httpTransport = new HttpTransport<HttpTransportTypes>({
     }
 
     return params.map((param) => {
-      let result = 0
+      let result = undefined
 
       Object.values(response.data).forEach((row) => {
         if (row.baseSymbol === param.base && row.quoteSymbol === param.quote) {
           result = Number(row.price)
         }
       })
+
+      if (result === undefined) {
+        return {
+          params: param,
+          response: {
+            errorMessage: `The data provider didn't return any value for ${param.base}/${param.quote}`,
+            statusCode: 502,
+          },
+        }
+      }
 
       return {
         params: param,

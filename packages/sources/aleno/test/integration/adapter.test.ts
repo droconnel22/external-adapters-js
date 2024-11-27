@@ -35,7 +35,7 @@ describe('execute', () => {
   describe('price endpoint', () => {
     it('should return success', async () => {
       const data = {
-        base: 'ETH',
+        base: 'FRAX',
         quote: 'USD',
         endpoint: 'price',
         transport: 'rest',
