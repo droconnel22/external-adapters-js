@@ -91,13 +91,13 @@ export class SocketIOTransport extends StreamingTransport<SocketIOTransportTypes
       logger.info({ msg: 'Connection closed', reason, details })
     })
 
-    // this.socket.on('connect_error', (err) => {
-    //   if (this.socket?.active) {
-    //     logger.info('temporary failure, the socket will automatically try to reconnect')
-    //   } else {
-    //     logger.error(err.message)
-    //   }
-    // })
+    this.socket.on('connect_error', (error) => {
+      if (this.socket?.active) {
+        logger.info('temporary failure, the socket will automatically try to reconnect')
+      } else {
+        logger.error(error.message)
+      }
+    })
 
     this.socket.on('initial_token_states', (data) => {
       logger.info('received initial data:')
